@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HospedesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('/hospedes')->group(function{
-    
-})
+Route::prefix('/hospedes')->group(function(){
+    Route::get('/cadastrar', [HospedesController::class, 'create'])->name('hospedes.cadastrar');
+});
 
 
