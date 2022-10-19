@@ -33,7 +33,7 @@
                         <div class="accordion-body">
                             <ul>
                                 <li>
-                                    <a href="/ihotel/cadastro/cadastrar" class="accordion-item" id="flush-headingOne">
+                                    <a href="/hospedes/cadastrar" class="accordion-item" id="flush-headingOne">
                                         <div class="button-accordion-item">
                                             <i class="bi bi-person-plus"></i>
                                             <span>Novo cadastro</span>
