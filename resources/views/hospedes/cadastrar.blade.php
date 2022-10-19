@@ -1,4 +1,4 @@
-@extends ('layouts.main')
+@extends ('main')
 
 @section ('title', 'iHotel - Cadastro de Hóspedes')
 
@@ -9,7 +9,7 @@
 </div>
 
 <div class="col-lg-11" id="container-main">   
-    <form action="/ihotel/cadastro/cadastrar" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('hospedes.cadastrar') }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('POST')
         <div class="row g-3">
@@ -35,7 +35,7 @@
 
             <div class="col-sm-3">
                 <label for="dt_nasc" class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control" id="dt_nasc" name="dt_nasc" placeholder="" value="">
+                <input type="date" class="form-control" id="dt_nasc" name="data_nascimento" placeholder="" value="">
             </div>
 
             <div class="col-sm-3">
@@ -49,7 +49,7 @@
 
             <div class="col-sm-3">
                 <label for="tp_doc" class="form-label">Tipo Documento</label>
-                <select class="form-select" name="tp_doc" id="tp_doc">
+                <select class="form-select" name="tipo_documento" id="tipo_documento">
                     <option value="">Selecione uma opção</option>
                     <option value="1">RG</option>
                     <option value="2">CNH</option>
@@ -59,7 +59,7 @@
 
             <div class="col-sm-4">
                 <label for="num_doc" class="form-label">Nº Documento</label>
-                <input type="text" class="form-control" id="num_doc" name="num_doc" placeholder="" value="">
+                <input type="text" class="form-control" id="numero_documento" name="numero_documento" placeholder="" value="">
             </div>
 
             
@@ -95,16 +95,7 @@
 </div>
 
 @if(session('cadastroRealizado'))
-<div class="col-lg-11">  
-    <div class="toast show align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-            <div class="toast-body">
-                <span>{{ session('cadastroRealizado') }}</span>
-            </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-    </div>
-</div>
+    @include('components.alerta-sucesso')
 @endif
 
 @endsection
