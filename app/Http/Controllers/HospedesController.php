@@ -30,4 +30,10 @@ class HospedesController extends Controller
         $hospede->save();
         return redirect('hospedes/cadastrar')->with('cadastroRealizado', 'Cadastro realizado com sucesso!');
     }
+
+    public function show()
+    {
+        $hospedes = Hospedes::all();
+        return view('hospedes.consultar', compact('hospedes'));
+    }
 }
