@@ -95,7 +95,7 @@
 </div>
 
 @if(session('cadastroRealizado'))
-    @include('components.alerta-sucesso')
+    @include('hospedes.components.alerta-sucesso')
 @endif
 
 @endsection

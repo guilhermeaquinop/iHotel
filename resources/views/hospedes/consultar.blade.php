@@ -67,11 +67,11 @@
 
 @if (session('exclusaoRealizada'))
 
-    @include('components.alerta-exlcusao')
+    @include('hospedes.components.alerta-exlcusao')
     
 @elseif (session('edicaoRealizada'))
 
-    @include('components.alerta-edicao')
+    @include('hospedes.components.alerta-edicao')
 
 @endif
 
