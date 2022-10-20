@@ -23,6 +23,7 @@ Route::prefix('/hospedes')->group(function(){
     Route::get('/cadastrar', [HospedesController::class, 'create'])->name('hospedes.view-cadastrar');
     Route::post('/cadastrar', [HospedesController::class, 'store'])->name('hospedes.cadastrar');
     Route::get('/consultar', [HospedesController::class, 'show'])->name('hospedes.consultar');
+    Route::get('/editar/{id_hospede?}', [HospedesController::class, 'edit'])->name('hospedes.editar');
 });
 
 
