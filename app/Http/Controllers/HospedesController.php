@@ -36,4 +36,9 @@ class HospedesController extends Controller
         $hospedes = Hospedes::all();
         return view('hospedes.consultar', compact('hospedes'));
     }
+
+    public function edit($id_hospede) {
+        $hospede = Hospedes::findOrFail($id_hospede);
+        return view('hospedes.editar', compact('hospede'));
+    }
 }
