@@ -41,7 +41,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/ihotel/cadastro/consultar" class="accordion-item" id="flush-headingOne">
+                                    <a href="/hospedes/consultar" class="accordion-item" id="flush-headingOne">
                                         <div class="button-accordion-item">
                                             <i class="bi bi-card-list"></i>
                                             <span>Consultar cadastro</span>
