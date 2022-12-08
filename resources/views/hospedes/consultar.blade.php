@@ -52,7 +52,7 @@
                 <td>{{ $hospede->cpf }}</td>
                 <td>01/01/2022</td>
                 <td><a href="{{ route('hospedes.editar', $hospede->id_hospede) }}" class="btn btn-primary delete-btn" title="Editar"><i class="bi bi-pencil-square"></i></a></td>
-                <form action="" method="POST">
+                <form action="{{ route('hospedes.deletar', $hospede->id_hospede)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <td><button type="submit" class="btn btn-danger delete-btn" title="Deletar"><i class="bi bi-trash-fill"></button></td>
