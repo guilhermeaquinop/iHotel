@@ -41,4 +41,17 @@ class HospedesController extends Controller
         $hospede = Hospedes::findOrFail($id_hospede);
         return view('hospedes.editar', compact('hospede'));
     }
+
+    public function update(Request $request) 
+    {
+        $hospede = $request->all();
+        Hospedes::findOrFail($request->id_hospede)->update($hospede);
+        return redirect('hospedes/consultar');//->with('edicaoRealizada', 'Cadastro atualizado com sucesso!');
+    }
+
+    public function destroy($id_hospede)
+    {
+        Hospedes::findOrFail($id_hospede)->delete();
+        return redirect('hospedes/consultar');//->with('exclusaoRealizada', 'Cadastro excluído com sucesso!');
+    }
 }
