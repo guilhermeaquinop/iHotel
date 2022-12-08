@@ -24,6 +24,8 @@ Route::prefix('/hospedes')->group(function(){
     Route::post('/cadastrar', [HospedesController::class, 'store'])->name('hospedes.cadastrar');
     Route::get('/consultar', [HospedesController::class, 'show'])->name('hospedes.consultar');
     Route::get('/editar/{id_hospede?}', [HospedesController::class, 'edit'])->name('hospedes.editar');
+    Route::put('/atualizar/{id_hospede}', [HospedesController::class, 'update'])->name('hospedes.atualizar');
+    Route::delete('/deletar/{id_hospede}', [HospedesController::class, 'destroy'])->name('hospedes.deletar');
 });
 
 
