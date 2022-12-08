@@ -9,7 +9,7 @@
 </div>
 
 <div class="col-lg-11" id="container-main">  
-    <form action="/ihotel/cadastro/consultar/atualizar/{{ $hospede->id_hospede }}" method="POST">
+    <form action="/hospedes/atualizar/{{$hospede->id_hospede}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row g-3">
